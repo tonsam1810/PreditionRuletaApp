@@ -25,7 +25,7 @@ function addNumber() {
     let position; // Variable para guardar la posición del número
     // Comprobamos a qué grupo de 12 números pertenece el número
     if ([3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36].includes(number)) {
-        position = "3rd 12"; // Si pertenece al primer grupo, guardamos esa posición
+        position = "1st 12"; // Si pertenece al primer grupo, guardamos esa posición
         lastFirst12 = totalPlays; // Y actualizamos la última vez que se eligió ese grupo
         first12Count++; // Y aumentamos el contador de veces que se ha elegido ese grupo
     } else if ([2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35].includes(number)) {
@@ -33,7 +33,7 @@ function addNumber() {
         lastSecond12 = totalPlays;
         second12Count++;
     } else {
-        position = "1st 12"; // Y para el tercer grupo
+        position = "3rd 12"; // Y para el tercer grupo
         lastThird12 = totalPlays;
         third12Count++;
     }
