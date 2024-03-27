@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Probability Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CALCU RULETA</h1>
+        <label for="number">Ingrese un numero (1-36):</label>
+        <input type="number" id="number" min="1" max="36">
+        <button onclick="addNumber()">Add Number</button>
+        <h2>Hitorial de jugadas:</h2>
+        <ul id="numbersList"></ul>
+        <h2>Probabilidad:</h2>
+<table>
+    <tr>
+        <th></th>
+        <th>Racha</th>
+        <th>Última elección hace</th>
+        <th>Probabilidad</th>
+        <th>Veces elegido</th>
+    </tr>
+    <tr>
+        <td>1st 12:</td>
+        <td><span id="firstStreak">0</span> veces</td>
+        <td><span id="firstLastChoice">0</span> jugadas</td>
+        <td><span id="firstProbability">0</span>%</td>
+        <td><span id="firstCount">0</span> veces</td>
+    </tr>
+    <tr>
+        <td>2nd 12:</td>
+        <td><span id="secondStreak">0</span> veces</td>
+        <td><span id="secondLastChoice">0</span> jugadas</td>
+        <td><span id="secondProbability">0</span>%</td>
+        <td><span id="secondCount">0</span> veces</td>
+    </tr>
+    <tr>
+        <td>3rd 12:</td>
+        <td><span id="thirdStreak">0</span> veces</td>
+        <td><span id="thirdLastChoice">0</span> jugadas</td>
+        <td><span id="thirdProbability">0</span>%</td>
+        <td><span id="thirdCount">0</span> veces</td>
+    </tr>
+</table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

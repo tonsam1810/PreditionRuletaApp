@@ -1,0 +1,91 @@
+/* Estilos para PC */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type="number"] {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#numbersList {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#probabilityList {
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Estilos para tablet */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    input[type="number"], button {
+        width: 70%;
+    }
+
+    table {
+        table-layout: fixed;
+    }
+
+    th, td {
+        word-wrap: break-word;
+    }
+}
+
+/* Estilos para smartphone */
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 480px;
+    }
+
+    input[type="number"], button {
+        width: 100%;
+    }
+
+    table {
+        table-layout: fixed;
+    }
+
+    th, td {
+        word-wrap: break-word;
+    }
+}
