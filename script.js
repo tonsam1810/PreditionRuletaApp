@@ -66,12 +66,15 @@ function updateLastChosen() {
     document.getElementById('secondStreak').textContent = (lastPosition === "2nd 12" ? streakCount : 0) + " veces";
     document.getElementById('thirdStreak').textContent = (lastPosition === "3rd 12" ? streakCount : 0) + " veces";
 
-    // Actualizamos las jugadas desde la última vez que se eligió cada grupo
+   // Actualizamos las jugadas desde la última vez que se eligió cada grupo
 let firstLastChoice = totalPlays - lastFirst12;
 document.getElementById('firstLastChoice').textContent = firstLastChoice + " jugadas";
 if (firstLastChoice >= 6) {
     document.getElementById('firstLastChoice').parentNode.style.backgroundColor = 'yellow';
     document.getElementById('firstLastChoice').parentNode.style.color = 'red';
+} else {
+    document.getElementById('firstLastChoice').parentNode.style.backgroundColor = '';
+    document.getElementById('firstLastChoice').parentNode.style.color = '';
 }
 
 let secondLastChoice = totalPlays - lastSecond12;
@@ -79,6 +82,9 @@ document.getElementById('secondLastChoice').textContent = secondLastChoice + " j
 if (secondLastChoice >= 6) {
     document.getElementById('secondLastChoice').parentNode.style.backgroundColor = 'yellow';
     document.getElementById('secondLastChoice').parentNode.style.color = 'red';
+} else {
+    document.getElementById('secondLastChoice').parentNode.style.backgroundColor = '';
+    document.getElementById('secondLastChoice').parentNode.style.color = '';
 }
 
 let thirdLastChoice = totalPlays - lastThird12;
@@ -86,6 +92,9 @@ document.getElementById('thirdLastChoice').textContent = thirdLastChoice + " jug
 if (thirdLastChoice >= 6) {
     document.getElementById('thirdLastChoice').parentNode.style.backgroundColor = 'yellow';
     document.getElementById('thirdLastChoice').parentNode.style.color = 'red';
+} else {
+    document.getElementById('thirdLastChoice').parentNode.style.backgroundColor = '';
+    document.getElementById('thirdLastChoice').parentNode.style.color = '';
 }
 }
 
