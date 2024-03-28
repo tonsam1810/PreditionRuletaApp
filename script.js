@@ -67,9 +67,26 @@ function updateLastChosen() {
     document.getElementById('thirdStreak').textContent = (lastPosition === "3rd 12" ? streakCount : 0) + " veces";
 
     // Actualizamos las jugadas desde la última vez que se eligió cada grupo
-    document.getElementById('firstLastChoice').textContent = (totalPlays - lastFirst12) + " jugadas";
-    document.getElementById('secondLastChoice').textContent = (totalPlays - lastSecond12) + " jugadas";
-    document.getElementById('thirdLastChoice').textContent = (totalPlays - lastThird12) + " jugadas";
+let firstLastChoice = totalPlays - lastFirst12;
+document.getElementById('firstLastChoice').textContent = firstLastChoice + " jugadas";
+if (firstLastChoice >= 6) {
+    document.getElementById('firstLastChoice').parentNode.style.backgroundColor = 'yellow';
+    document.getElementById('firstLastChoice').parentNode.style.color = 'red';
+}
+
+let secondLastChoice = totalPlays - lastSecond12;
+document.getElementById('secondLastChoice').textContent = secondLastChoice + " jugadas";
+if (secondLastChoice >= 6) {
+    document.getElementById('secondLastChoice').parentNode.style.backgroundColor = 'yellow';
+    document.getElementById('secondLastChoice').parentNode.style.color = 'red';
+}
+
+let thirdLastChoice = totalPlays - lastThird12;
+document.getElementById('thirdLastChoice').textContent = thirdLastChoice + " jugadas";
+if (thirdLastChoice >= 6) {
+    document.getElementById('thirdLastChoice').parentNode.style.backgroundColor = 'yellow';
+    document.getElementById('thirdLastChoice').parentNode.style.color = 'red';
+}
 }
 
 // Función para actualizar la probabilidad de cada grupo
